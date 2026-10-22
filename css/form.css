@@ -1,0 +1,76 @@
+/* Форма заявки: общая для обоих вариантов сайта. Углы прямые, как во всём дизайне. */
+.lf{background:#16171A;border:1px solid #2A2B30;padding:40px;position:relative}
+.lf h3{font-family:var(--osw);font-weight:500;font-size:28px;text-transform:uppercase;letter-spacing:.02em;margin:0 0 6px}
+.lf .sub{margin:0 0 28px;font-size:15px;line-height:1.55;color:#B8B6B1}
+.lf fieldset{border:0;margin:0;padding:0;min-width:0}
+.lf legend{float:left;width:100%;font-family:var(--osw);font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:#E2554C;padding:0;margin:0 0 18px}
+.lf legend+*{clear:both}
+.lf fieldset+fieldset{margin-top:30px;padding-top:28px;border-top:1px solid #2A2B30}
+.lf .opt{color:#8F8D89;text-transform:none;letter-spacing:0;font-family:var(--man);font-size:13px}
+.f{display:grid;gap:8px;margin-bottom:20px;align-content:start}
+.f[hidden]{display:none}
+.f:last-child{margin-bottom:0}
+.f .lbl{font-size:15px;font-weight:600;color:#ECEAE6}
+.f .lbl i{font-style:normal;color:#E2554C}
+.f .hint{font-size:13px;color:#9B9A97;margin:-2px 0 0}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;align-items:start}
+.lf input[type=text],.lf input[type=tel],.lf textarea{width:100%;background:#0D0D0E;border:1px solid #3A3B40;color:#F5F4F1;font:inherit;font-size:16px;padding:14px 16px;border-radius:0;transition:border-color .2s,box-shadow .2s}
+.lf textarea{min-height:96px;resize:vertical;line-height:1.5}
+.lf input::placeholder,.lf textarea::placeholder{color:#8E8D8A}
+.lf input[type=text]:hover,.lf input[type=tel]:hover,.lf textarea:hover{border-color:#55565C}
+.lf input[type=text]:focus,.lf input[type=tel]:focus,.lf textarea:focus{outline:0;border-color:#E2554C;box-shadow:0 0 0 3px rgba(226,85,76,.25)}
+.f.bad input[type=text],.f.bad input[type=tel]{border-color:#F06A61}
+.err{margin:0;font-size:13px;color:#F48A82;min-height:0}
+.err:empty{display:none}
+
+/* варианты ответа (кнопки-плашки) */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip span{display:block;padding:10px 14px;border:1px solid #3A3B40;background:#0D0D0E;font-size:14px;color:#DAD8D3;line-height:1.3;cursor:pointer;user-select:none;transition:border-color .2s,background-color .2s,color .2s,transform .15s}
+.chip:hover span{border-color:#6A6B70;color:#fff}
+.chip input:checked+span{border-color:var(--r);background:rgba(192,34,27,.18);color:#fff}
+.chip input:focus-visible+span{outline:2px solid #F5F4F1;outline-offset:2px}
+.chip input:active+span{transform:scale(.97)}
+.f.bad .chip span{border-color:#7A3A36}
+
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.5;color:#B8B6B1;cursor:pointer}
+.consent input{appearance:none;-webkit-appearance:none;flex:none;width:20px;height:20px;margin:1px 0 0;border:1px solid #55565C;background:#0D0D0E;display:grid;place-content:center;cursor:pointer}
+.consent input::before{content:"";width:10px;height:6px;border:2px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px);opacity:0}
+.consent input:checked{background:var(--r);border-color:var(--r)}
+.consent input:checked::before{opacity:1}
+.consent input:focus-visible{outline:2px solid #F5F4F1;outline-offset:2px}
+.consent a{color:#F5F4F1;text-decoration:underline;text-underline-offset:3px}
+.f.bad .consent input{border-color:#F06A61}
+
+.lf .send{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.lf .send .btn{min-width:240px}
+.lf .send .btn[disabled]{opacity:.7;cursor:progress}
+.lf .send .btn[disabled] .t1{display:none}
+.lf .send .btn:not([disabled]) .t2{display:none}
+.lf .send p{margin:0;font-size:13px;color:#9B9A97;flex:1;min-width:180px}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+
+/* состояния: форма, отправлено, ошибка */
+.lf [data-panel]{display:none}
+.lf[data-state="ok"] [data-panel="ok"],.lf[data-state="fail"] [data-panel="fail"]{display:block}
+.lf[data-state="ok"] form,.lf[data-state="fail"] form{display:none}
+.lf [data-panel]:focus{outline:0}
+.lf [data-panel] .mk{width:56px;height:56px;border:2px solid var(--r);display:grid;place-content:center;margin-bottom:22px}
+.lf [data-panel] .mk svg{width:30px;height:30px;color:#fff}
+.lf .tick{width:22px;height:12px;border:3px solid #fff;border-top:0;border-right:0;transform:translateY(-3px) rotate(-45deg)}
+.lf .bang{font-family:var(--osw);font-weight:600;font-size:30px;line-height:1;color:#fff}
+.lf [data-panel] h3{font-size:32px}
+.lf [data-panel] p{font-size:16px;line-height:1.6;color:#B8B6B1;margin:10px 0 0;max-width:46ch}
+.lf [data-panel] .demo{font-size:13px;color:#9B9A97;border-left:2px solid var(--r);padding-left:12px;margin-top:18px}
+.lf [data-panel] .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.lf .linkbtn{background:none;border:0;padding:0;font:inherit;font-size:15px;color:#F5F4F1;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.lf .linkbtn:hover{color:#E2554C}
+
+@media (max-width:767px){
+ .lf{padding:26px 18px 28px;margin:0 calc(-1 * var(--pad) + 0px)}
+ .lf h3{font-size:24px}
+ .row2{grid-template-columns:1fr}
+ .chip span{padding:10px 12px}
+ .lf .send .btn{width:100%;min-width:0}
+}
