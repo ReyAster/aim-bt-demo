@@ -150,6 +150,13 @@ section{position:relative}
 @media (max-width:767px){.clouds{background-image:url(img/clouds-band-1400.png);background-image:image-set(url(img/clouds-band-1400.webp) type("image/webp"),url(img/clouds-band-1400.png) type("image/png"))}}
 .bigword{position:absolute;left:0;right:0;top:7.4cqw;text-align:center;font-family:var(--play);font-weight:900;font-size:min(25cqw,504px);line-height:1;letter-spacing:.06em;color:#fff;text-shadow:0 18px 50px rgba(8,30,70,.35);pointer-events:none;user-select:none}
 .bigword .bw{display:inline-block}
+/* Отражения неба в стекле: слой виден только на зданиях (маска = вырезанные здания),
+   облачные разводы медленно плывут, по стеклу изредка проходит мягкий блик */
+.refl{position:absolute;inset:0;overflow:hidden;pointer-events:none;mix-blend-mode:screen;opacity:.75;
+ -webkit-mask:url(img/hero-fg-1400.webp) 0 0/100% 100% no-repeat;mask:url(img/hero-fg-1400.webp) 0 0/100% 100% no-repeat}
+.refl i{position:absolute;top:0;left:0;width:400%;height:100%;background:url(img/reflect-1400.png) repeat-x 0 0/50% 100%;
+ background-image:image-set(url(img/reflect-2800.webp) type("image/webp"),url(img/reflect-1400.png) type("image/png"))}
+.refl::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 42%,rgba(255,255,255,.75) 50%,transparent 58%);transform:translateX(-110%)}
 .bigword{will-change:transform}
 /* затемнение под светлое небо: сверху лёгкое (для шапки), снизу плотное (для текста) */
 .shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,14,.35) 0%,rgba(13,13,14,0) 12%),linear-gradient(to top,rgba(10,10,11,1) 0%,rgba(10,10,11,.92) 20%,rgba(10,10,11,.62) 34%,rgba(10,10,11,.18) 50%,rgba(10,10,11,0) 62%)}
@@ -162,6 +169,9 @@ h1 span{color:var(--r)}
 @media (prefers-reduced-motion:no-preference){
  .clouds{animation:drift 150s linear infinite;will-change:transform}
  @keyframes drift{to{transform:translate3d(-50%,0,0)}}
+ .refl i{animation:drift 110s linear infinite reverse;will-change:transform}
+ .refl::after{animation:glint 11s cubic-bezier(.45,0,.25,1) 2.5s infinite}
+ @keyframes glint{0%{transform:translateX(-110%)}30%,100%{transform:translateX(110%)}}
  .bigword .bw{animation:rise 1.8s var(--ease) .15s both}
  @keyframes rise{from{transform:translateY(34%);opacity:0}35%{opacity:1}to{transform:none;opacity:1}}
 }
@@ -413,6 +423,7 @@ footer a:hover{color:var(--w)}
    <source type="image/webp" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="img/hero-fg-800.webp 800w, img/hero-fg-1400.webp 1400w, img/hero-fg-2000.webp 2000w, img/hero-fg-2800.webp 2800w">
    <img src="img/hero-fg-1400.png" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="img/hero-fg-800.png 800w, img/hero-fg-1400.png 1400w, img/hero-fg-2000.png 2000w" width="2800" height="1866" alt="Стеклянные небоскрёбы, вид снизу" fetchpriority="high">
   </picture>
+ <div class="refl" aria-hidden="true"><i></i></div>
  </div>
  <div class="shade"></div>
  <div class="in">
