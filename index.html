@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <!-- Контакты и настройки формы: в файле config.js -->
 <script src="config.js"></script>
-<title>AIM Building Technologies: фасады, СПК и витражи в Москве</title>
-<meta name="description" content="Монтаж фасадов, светопрозрачных конструкций и витражей в Москве и области. Свои бригады, ИТР и ПТО, без субподрядчиков. От 6 000 ₽ за м². Оперативный расчёт и выезд на объект.">
+<title>АИМ: навесные фасады, светопрозрачные конструкции и витражи в Москве</title>
+<meta name="description" content="АИМ: монтаж навесных вентилируемых фасадов (НВФ), светопрозрачных конструкций (СПК) и витражей в Москве и области. Свои бригады, ИТР и ПТО, без субподрядчиков. От 6 000 ₽ за м². Оперативный расчёт и выезд на объект.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0D0D0E">
 <meta name="format-detection" content="telephone=no">
@@ -17,14 +17,14 @@
 <!-- <link rel="canonical" href="https://YOUR-DOMAIN.ru/"> -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:site_name" content="AIM Building Technologies">
-<meta property="og:title" content="AIM Building Technologies: фасады, СПК и витражи в Москве">
+<meta property="og:site_name" content="АИМ">
+<meta property="og:title" content="АИМ: навесные фасады, СПК и витражи в Москве">
 <meta property="og:description" content="Быстро. Точно. Без переделок. Свои бригады, ИТР и ПТО, объекты до 10 000 м². От 6 000 ₽ за м².">
 <meta property="og:url" content="https://YOUR-DOMAIN.ru/">
 <meta property="og:image" content="https://YOUR-DOMAIN.ru/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="AIM Building Technologies: фасады, СПК и витражи">
+<meta property="og:image:alt" content="АИМ: навесные вентилируемые фасады, светопрозрачные конструкции и витражи">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="favicon.ico" sizes="48x48">
@@ -42,8 +42,9 @@
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
   "@id": "https://YOUR-DOMAIN.ru/#company",
-  "name": "AIM Building Technologies",
-  "description": "Монтаж фасадов, светопрозрачных конструкций (СПК) и витражей в Москве и Московской области. Свои бригады от 10 до 30 человек, свой ИТР и ПТО, без субподрядчиков.",
+  "name": "АИМ",
+  "alternateName": "AIM Building Technologies",
+  "description": "Монтаж навесных вентилируемых фасадов (НВФ), светопрозрачных конструкций (СПК) и витражей в Москве и Московской области. Свои бригады от 10 до 30 человек, свой ИТР и ПТО, без субподрядчиков.",
   "url": "https://YOUR-DOMAIN.ru/",
   "logo": "https://YOUR-DOMAIN.ru/img/icon-512.png",
   "image": "https://YOUR-DOMAIN.ru/img/og-image.jpg",
@@ -61,7 +62,7 @@
     "@type": "OfferCatalog",
     "name": "Услуги",
     "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Монтаж навесных фасадов", "areaServed": "Москва и Московская область"},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Навесные вентилируемые фасады (НВФ)", "areaServed": "Москва и Московская область"},
        "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 6000, "priceCurrency": "RUB", "unitText": "м²"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Светопрозрачные конструкции (СПК)", "areaServed": "Москва и Московская область"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Витражное остекление", "areaServed": "Москва и Московская область"}}
@@ -116,6 +117,9 @@ section{position:relative}
 
 /* ---------- шапка ---------- */
 .hdr{position:fixed;left:0;right:0;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px var(--pad);border-bottom:1px solid rgba(255,255,255,.14);transition:background-color .3s,padding .3s}
+/* пока шапка прозрачная и под ней светлое небо: тень для читаемости текста */
+.hdr:not(.fix):not(.open) .brand div,.hdr:not(.fix):not(.open) .nav,.hdr:not(.fix):not(.open) .tel{text-shadow:0 1px 10px rgba(5,20,45,.55)}
+.hdr:not(.fix):not(.open) .brand span{color:#F5F4F1}
 .hdr.fix,.hdr.open{background:rgba(13,13,14,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);padding-top:14px;padding-bottom:14px}
 .brand{display:flex;align-items:center;gap:14px;flex:none}
 .brand img{width:40px;height:50px}
@@ -142,12 +146,13 @@ section{position:relative}
 .stage{position:absolute;top:0;left:-15%;width:130%;aspect-ratio:2800/1866}
 .stage img{position:absolute;inset:0;width:100%;height:100%}
 /* Облака: полоса неба (кадр + зеркальная копия), бесконечно плывёт влево и плавно растворяется книзу */
-.clouds{position:absolute;top:0;left:0;width:400%;height:36%;background:url(img/clouds-band-2800.jpg) repeat-x 0 0/50% 100%;background-image:image-set(url(img/clouds-band-2800.webp) type("image/webp"),url(img/clouds-band-2800.jpg) type("image/jpeg"));-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent);mask-image:linear-gradient(to bottom,#000 55%,transparent)}
-@media (max-width:767px){.clouds{background-image:url(img/clouds-band-1400.jpg);background-image:image-set(url(img/clouds-band-1400.webp) type("image/webp"),url(img/clouds-band-1400.jpg) type("image/jpeg"))}}
-.bigword{position:absolute;left:0;right:0;top:4.861cqw;text-align:center;font-family:var(--play);font-weight:900;font-size:min(27.778cqw,560px);line-height:1;letter-spacing:.06em;color:#fff;text-shadow:0 20px 60px rgba(0,0,0,.25);pointer-events:none;user-select:none}
+.clouds{position:absolute;top:0;left:0;width:400%;height:36%;background:url(img/clouds-band-2800.png) repeat-x 0 0/50% 100%;background-image:image-set(url(img/clouds-band-2800.webp) type("image/webp"),url(img/clouds-band-2800.png) type("image/png"));-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent);mask-image:linear-gradient(to bottom,#000 55%,transparent)}
+@media (max-width:767px){.clouds{background-image:url(img/clouds-band-1400.png);background-image:image-set(url(img/clouds-band-1400.webp) type("image/webp"),url(img/clouds-band-1400.png) type("image/png"))}}
+.bigword{position:absolute;left:0;right:0;top:7.4cqw;text-align:center;font-family:var(--play);font-weight:900;font-size:min(25cqw,504px);line-height:1;letter-spacing:.06em;color:#fff;text-shadow:0 18px 50px rgba(8,30,70,.35);pointer-events:none;user-select:none}
 .bigword .bw{display:inline-block}
 .bigword{will-change:transform}
-.shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,14,.55) 0%,rgba(13,13,14,0) 14%),linear-gradient(to top,rgba(10,10,11,1) 0%,rgba(10,10,11,.95) 24%,rgba(10,10,11,.7) 42%,rgba(10,10,11,.25) 60%,rgba(10,10,11,0) 76%)}
+/* затемнение под светлое небо: сверху лёгкое (для шапки), снизу плотное (для текста) */
+.shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,14,.35) 0%,rgba(13,13,14,0) 12%),linear-gradient(to top,rgba(10,10,11,1) 0%,rgba(10,10,11,.92) 20%,rgba(10,10,11,.62) 34%,rgba(10,10,11,.18) 50%,rgba(10,10,11,0) 62%)}
 .hero .in{position:absolute;left:var(--pad);right:var(--pad);bottom:72px;display:grid;grid-template-columns:minmax(0,1fr) var(--hr);gap:var(--hg);align-items:end}
 .hero .eyebrow{color:#F5F4F1;text-shadow:0 1px 12px rgba(0,0,0,.6)}
 h1{font-family:var(--osw);font-weight:600;font-size:min(92px,(100cqw - var(--hr) - var(--hg) - 2 * var(--pad)) / 7.1);line-height:1;text-transform:uppercase;margin:0;letter-spacing:.005em;white-space:nowrap}
@@ -176,6 +181,8 @@ h1 span{color:var(--r)}
 .tile:hover img{transform:scale(1.05);filter:saturate(.95) brightness(1)}
 .tile h3{font-family:var(--osw);font-weight:600;font-size:34px;text-transform:uppercase;margin:0 0 12px;line-height:1.05}
 .tile p{margin:0;font-size:16px;line-height:1.6;color:var(--mut);max-width:44ch}
+abbr[title]{text-decoration:none;cursor:help}
+.tile .ab{display:block;font-family:var(--osw);font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--r-txt);margin-bottom:10px}
 .tile .pr{display:flex;align-items:baseline;gap:10px;margin-top:22px}
 .tile .pr b{font-family:var(--osw);font-weight:500;font-size:26px}
 .tile .pr span{font-size:14px;color:#8F8D89}
@@ -186,6 +193,7 @@ h1 span{color:var(--r)}
 .tile.big h3{font-size:48px}
 .tile.big p{color:#C9C7C2}
 .tile.sm{display:grid;grid-template-columns:42% 1fr}
+.tile.sm h3{font-size:28px}
 .tile.sm .t{padding:32px 32px 34px;border-left:4px solid var(--r);display:flex;flex-direction:column;justify-content:center}
 
 /* ---------- почему AIM ---------- */
@@ -284,8 +292,8 @@ footer a:hover{color:var(--w)}
  .sec{padding:96px var(--pad)}
  .hero{--k:1.5;height:auto;padding:calc(var(--k) * 44%) 0 0}
  .stage{width:calc(var(--k) * 100%);left:calc((1 - var(--k)) * 50%)}
- .bigword{top:11cqw;font-size:31cqw}
- .shade{bottom:auto;height:calc(var(--k) * 66.64cqw);background:linear-gradient(to bottom,rgba(13,13,14,.55) 0%,rgba(13,13,14,0) 16%),linear-gradient(to top,rgba(10,10,11,1) 0%,rgba(10,10,11,.92) 22%,rgba(10,10,11,.6) 40%,rgba(10,10,11,0) 62%)}
+ .bigword{top:15cqw;font-size:26cqw}
+ .shade{bottom:auto;height:calc(var(--k) * 66.64cqw);background:linear-gradient(to bottom,rgba(13,13,14,.35) 0%,rgba(13,13,14,0) 14%),linear-gradient(to top,rgba(10,10,11,1) 0%,rgba(10,10,11,.9) 20%,rgba(10,10,11,.5) 36%,rgba(10,10,11,0) 56%)}
  .hero .in{position:relative;left:auto;right:auto;bottom:auto;display:block;padding:0 var(--pad) 56px}
  h1{font-size:clamp(46px,9vw,80px);margin-bottom:28px}
  .facts{grid-template-columns:1fr 1fr}
@@ -323,8 +331,8 @@ footer a:hover{color:var(--w)}
  .hero .eyebrow{font-size:12px;letter-spacing:.12em}
  .eyebrow::before{width:26px}
  .hero{--k:1.8;padding-top:calc(var(--k) * 43%)}
- .bigword{top:10cqw;font-size:36cqw}
- .shade{background:linear-gradient(to bottom,rgba(13,13,14,.6) 0%,rgba(13,13,14,0) 18%),linear-gradient(to top,rgba(10,10,11,1) 0%,rgba(10,10,11,.9) 24%,rgba(10,10,11,.55) 42%,rgba(10,10,11,0) 64%)}
+ .bigword{top:17cqw;font-size:29cqw}
+ .shade{background:linear-gradient(to bottom,rgba(13,13,14,.4) 0%,rgba(13,13,14,0) 16%),linear-gradient(to top,rgba(10,10,11,1) 0%,rgba(10,10,11,.88) 20%,rgba(10,10,11,.45) 38%,rgba(10,10,11,0) 58%)}
  .hero .in{padding-bottom:40px}
  h1{font-size:clamp(40px,12.4vw,56px);margin-bottom:20px}
  .hero .lead{font-size:16px;margin-bottom:24px}
@@ -375,8 +383,8 @@ footer a:hover{color:var(--w)}
 <body>
 
 <header class="hdr" id="top">
- <a class="brand" href="#top" data-top aria-label="AIM Building Technologies, наверх">
-  <img src="img/aim-emblem.svg" width="40" height="50" alt="Эмблема AIM Building Technologies">
+ <a class="brand" href="#top" data-top aria-label="АИМ, наверх">
+  <img src="img/aim-emblem.svg" width="40" height="50" alt="Эмблема АИМ">
   <div><b>AIM</b><span>BUILDING TECHNOLOGIES</span></div>
  </a>
  <nav class="nav" aria-label="Основное меню"><a href="#services">Услуги</a><a href="#objects">Объекты</a><a href="#process">Как работаем</a><a href="#contacts">Контакты</a></nav>
@@ -400,7 +408,7 @@ footer a:hover{color:var(--w)}
    <img src="img/hero-bg-1400.jpg" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="img/hero-bg-800.jpg 800w, img/hero-bg-1400.jpg 1400w, img/hero-bg-2000.jpg 2000w, img/hero-bg-2800.jpg 2800w" width="2800" height="1866" alt="Облачное небо над небоскрёбами" fetchpriority="high">
   </picture>
   <div class="clouds" aria-hidden="true"></div>
-  <div class="bigword" aria-hidden="true"><span class="bw">AIM</span></div>
+  <div class="bigword" aria-hidden="true"><span class="bw">АИМ</span></div>
   <picture>
    <source type="image/webp" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="img/hero-fg-800.webp 800w, img/hero-fg-1400.webp 1400w, img/hero-fg-2000.webp 2000w, img/hero-fg-2800.webp 2800w">
    <img src="img/hero-fg-1400.png" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="img/hero-fg-800.png 800w, img/hero-fg-1400.png 1400w, img/hero-fg-2000.png 2000w" width="2800" height="1866" alt="Стеклянные небоскрёбы, вид снизу" fetchpriority="high">
@@ -408,9 +416,9 @@ footer a:hover{color:var(--w)}
  </div>
  <div class="shade"></div>
  <div class="in">
-  <div><div class="eyebrow">Фасады, СПК и витражи в Москве и области</div><h1 id="h1">Быстро. Точно.<br><span>Без переделок.</span></h1></div>
+  <div><div class="eyebrow"><span><abbr title="навесной вентилируемый фасад">НВФ</abbr>, <abbr title="светопрозрачные конструкции">СПК</abbr> и витражи в Москве и области</span></div><h1 id="h1">Быстро. Точно.<br><span>Без переделок.</span></h1></div>
   <div>
-   <p class="lead">Монтируем фасады и светопрозрачные конструкции на объектах до 10&nbsp;000 м². Своими бригадами, под контролем своих инженеров.</p>
+   <p class="lead">Монтируем навесные вентилируемые фасады и светопрозрачные конструкции на объектах до 10&nbsp;000 м². Своими бригадами, под контролем своих инженеров.</p>
    <div class="ctas">
     <a class="btn" href="#contacts">Получить расчёт<svg class="ic mv" aria-hidden="true"><use href="img/icons.svg#arrow"/></svg></a>
     <a class="btn o" href="https://t.me/ЗАГЛУШКА" data-href="telegram" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="img/icons.svg#tg"/></svg>Написать в Telegram</a>
@@ -433,16 +441,16 @@ footer a:hover{color:var(--w)}
   <article class="tile big" data-reveal>
    <picture>
     <source type="image/webp" sizes="(max-width:1023px) 100vw, 56vw" srcset="img/facades-600.webp 600w, img/facades-900.webp 900w, img/facades-1200.webp 1200w">
-    <img src="img/facades-900.jpg" sizes="(max-width:1023px) 100vw, 56vw" srcset="img/facades-600.jpg 600w, img/facades-900.jpg 900w, img/facades-1200.jpg 1200w" width="1200" height="1699" loading="lazy" decoding="async" alt="Белый фасад современного жилого здания" style="object-position:center 30%">
+    <img src="img/facades-900.jpg" sizes="(max-width:1023px) 100vw, 56vw" srcset="img/facades-600.jpg 600w, img/facades-900.jpg 900w, img/facades-1200.jpg 1200w" width="1200" height="1699" loading="lazy" decoding="async" alt="Навесной вентилируемый фасад современного жилого здания" style="object-position:center 30%">
    </picture>
-   <div class="t"><h3>Фасады</h3><p>Навесные фасадные системы для новых зданий и реконструкции: монтаж подсистемы, утепление и облицовка.</p><div class="pr"><b>от 6&nbsp;000 ₽</b><span>за м²</span></div></div>
+   <div class="t"><span class="ab"><abbr title="навесной вентилируемый фасад">НВФ</abbr></span><h3>Навесные вентилируемые фасады</h3><p>Для новых зданий и реконструкции: монтаж подсистемы, утепление и облицовка.</p><div class="pr"><b>от 6&nbsp;000 ₽</b><span>за м²</span></div></div>
   </article>
   <article class="tile sm" data-reveal style="--i:1">
    <div class="p"><picture>
     <source type="image/webp" sizes="(max-width:767px) 100vw, 20vw" srcset="img/spk-600.webp 600w, img/spk-900.webp 900w">
     <img src="img/spk-600.jpg" sizes="(max-width:767px) 100vw, 20vw" srcset="img/spk-600.jpg 600w, img/spk-900.jpg 900w" width="900" height="600" loading="lazy" decoding="async" alt="Светопрозрачная конструкция из стекла и алюминиевого профиля">
    </picture></div>
-   <div class="t"><h3>СПК</h3><p>Окна, двери, остекление фасадов и входных групп из алюминиевого профиля.</p><div class="pr"><b>Расчёт</b><span>по проекту</span></div></div>
+   <div class="t"><span class="ab"><abbr title="светопрозрачные конструкции">СПК</abbr></span><h3>Светопрозрачные конструкции</h3><p>Окна, двери, остекление фасадов и входных групп из алюминиевого профиля.</p><div class="pr"><b>Расчёт</b><span>по проекту</span></div></div>
   </article>
   <article class="tile sm" data-reveal style="--i:2">
    <div class="p"><picture>
@@ -460,11 +468,11 @@ footer a:hover{color:var(--w)}
   <img src="img/fog-1800.jpg" sizes="100vw" srcset="img/fog-1000.jpg 1000w, img/fog-1800.jpg 1800w" width="1800" height="1200" loading="lazy" decoding="async" alt="Небоскрёбы в тумане">
  </picture>
  <div class="emb" data-reveal>
-  <img src="img/aim-emblem.svg" width="280" height="350" loading="lazy" alt="Эмблема AIM Building Technologies: щит с буквами A, M, B, T">
+  <img src="img/aim-emblem.svg" width="280" height="350" loading="lazy" alt="Эмблема АИМ: щит с буквами A, M, B, T">
   <div class="wm" aria-hidden="true">AIM<small>BUILDING TECHNOLOGIES</small></div>
  </div>
  <div>
-  <div class="eyebrow" data-reveal>Почему AIM</div>
+  <div class="eyebrow" data-reveal>Почему АИМ</div>
   <h2 class="h2" id="why-h" data-reveal style="--i:1">Всё своё. Поэтому вам не придётся переделывать</h2>
   <p class="l" data-reveal style="--i:2">Не собираем людей под объект и не отдаём работу субподрядчикам. Расчёт, монтаж и контроль качества делает одна команда.</p>
   <div class="three">
@@ -487,11 +495,11 @@ footer a:hover{color:var(--w)}
  <ul class="olist">
   <li class="orow" data-reveal>
    <picture class="ob-ph"><source type="image/webp" srcset="img/hero-bg-800.webp"><img src="img/hero-bg-800.jpg" loading="lazy" decoding="async" alt="Фасад здания УВД Бабушкинского района"></picture>
-   <span class="tp">Фасад</span><h3>УВД Бабушкинского района</h3><p>Фасад административного здания, Москва</p>
+   <span class="tp">НВФ</span><h3>УВД Бабушкинского района</h3><p>Фасад административного здания, Москва</p>
   </li>
   <li class="orow" data-reveal>
    <picture class="ob-ph"><source type="image/webp" srcset="img/hero-bg-800.webp"><img src="img/hero-bg-800.jpg" loading="lazy" decoding="async" alt="Жилой дом по программе реновации в Бутово"></picture>
-   <span class="tp">Фасад, реновация</span><h3>Жилой дом в Бутово</h3><p>Фасад дома по программе реновации</p>
+   <span class="tp">НВФ, реновация</span><h3>Жилой дом в Бутово</h3><p>Фасад дома по программе реновации</p>
   </li>
   <li class="orow" data-reveal>
    <picture class="ob-ph"><source type="image/webp" srcset="img/hero-bg-800.webp"><img src="img/hero-bg-800.jpg" loading="lazy" decoding="async" alt="Витражи Карачаровского механического завода"></picture>
@@ -564,8 +572,8 @@ footer a:hover{color:var(--w)}
     <div class="f" data-f="work" role="group" aria-labelledby="lf-work-l" aria-describedby="lf-work-e">
      <span class="lbl" id="lf-work-l">Что нужно сделать <i aria-hidden="true">*</i></span>
      <div class="chips">
-      <label class="chip"><input type="checkbox" name="work" value="Фасад"><span>Фасад</span></label>
-      <label class="chip"><input type="checkbox" name="work" value="СПК: окна, двери, входные группы"><span>Окна, двери, входные группы (СПК)</span></label>
+      <label class="chip"><input type="checkbox" name="work" value="НВФ: навесной вентилируемый фасад"><span>Навесной вентилируемый фасад (НВФ)</span></label>
+      <label class="chip"><input type="checkbox" name="work" value="СПК: светопрозрачные конструкции"><span>Светопрозрачные конструкции (СПК): окна, двери, входные группы</span></label>
       <label class="chip"><input type="checkbox" name="work" value="Витражи"><span>Витражи</span></label>
       <label class="chip"><input type="checkbox" name="work" value="Нужна консультация"><span>Пока не знаю, нужна консультация</span></label>
      </div>
@@ -653,8 +661,8 @@ footer a:hover{color:var(--w)}
 </main>
 
 <footer>
- <div class="brand"><img src="img/aim-emblem.svg" width="40" height="50" loading="lazy" alt="Эмблема AIM Building Technologies"><div><b>AIM</b><span>BUILDING TECHNOLOGIES</span></div></div>
- <span>Фасады, СПК и витражи в Москве и области</span>
+ <div class="brand"><img src="img/aim-emblem.svg" width="40" height="50" loading="lazy" alt="Эмблема АИМ"><div><b>AIM</b><span>BUILDING TECHNOLOGIES</span></div></div>
+ <span><abbr title="навесной вентилируемый фасад">НВФ</abbr>, <abbr title="светопрозрачные конструкции">СПК</abbr> и витражи в Москве и области</span>
  <a href="privacy.html">Политика конфиденциальности</a>
 </footer>
 

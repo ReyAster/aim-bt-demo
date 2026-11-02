@@ -1,9 +1,23 @@
 {
-  "name": "AIM Building Technologies",
-  "short_name": "AIM",
+  "name": "АИМ: навесные фасады, СПК и витражи",
+  "short_name": "АИМ",
   "icons": [
-    {"src": "img/icon-192.png", "sizes": "192x192", "type": "image/png"},
-    {"src": "img/icon-512.png", "sizes": "512x512", "type": "image/png"}
+    {
+      "src": "img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ],
   "theme_color": "#0D0D0E",
   "background_color": "#0D0D0E",
