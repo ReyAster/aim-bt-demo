@@ -140,8 +140,8 @@ section[id]{scroll-margin-top:0}
 /* ---------- первый экран ---------- */
 .hero{position:relative;height:clamp(760px,29.17vw + 540px,1080px);overflow:hidden;background:#0A0A0B;container-type:inline-size}
 /* Слои: фон, слово AIM, здания с прозрачным небом. Оба снимка лежат в одном
-   блоке с пропорциями исходника 2800x1866, поэтому совпадают на любой ширине. */
-.stage{position:absolute;top:0;left:-15%;width:130%;aspect-ratio:2800/1866}
+   блоке с пропорциями исходника 2800x2263, поэтому совпадают на любой ширине. */
+.stage{position:absolute;top:0;left:-15%;width:130%;aspect-ratio:2800/2263}
 .stage img{position:absolute;inset:0;width:100%;height:100%}
 /* Облака: полоса неба (кадр + зеркальная копия), бесконечно плывёт влево и плавно растворяется книзу */
 .clouds{position:absolute;top:0;left:0;width:400%;height:36%;background:url(../img/clouds-band-2800.png) repeat-x 0 0/50% 100%;background-image:image-set(url(../img/clouds-band-2800.webp) type("image/webp"),url(../img/clouds-band-2800.png) type("image/png"));-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent);mask-image:linear-gradient(to bottom,#000 55%,transparent)}
@@ -312,7 +312,7 @@ footer .brand b{font-size:22px;color:var(--w)}
  .hero{--k:1.5;height:auto;padding:calc(var(--k) * 44%) 0 0}
  .stage{width:calc(var(--k) * 100%);left:calc((1 - var(--k)) * 50%)}
  .bigword{top:11cqw;font-size:31cqw}
- .shade{bottom:auto;height:calc(var(--k) * 66.64cqw);background:linear-gradient(to bottom,rgba(13,13,14,.55) 0%,rgba(13,13,14,0) 16%),linear-gradient(to top,rgba(10,10,11,1) 0%,rgba(10,10,11,.92) 22%,rgba(10,10,11,.6) 40%,rgba(10,10,11,0) 62%)}
+ .shade{bottom:auto;height:calc(var(--k) * 80.82cqw);background:linear-gradient(to bottom,rgba(13,13,14,.55) 0%,rgba(13,13,14,0) 16%),linear-gradient(to top,rgba(10,10,11,1) 0%,rgba(10,10,11,.92) 22%,rgba(10,10,11,.6) 40%,rgba(10,10,11,0) 62%)}
  .hero .in{position:relative;left:auto;right:auto;bottom:auto;display:block;padding:0 var(--pad) 48px}
  h1{font-size:clamp(46px,9vw,80px);margin-bottom:28px}
  .stats{position:relative;grid-template-columns:1fr 1fr}
@@ -452,13 +452,13 @@ footer .brand b{font-size:22px;color:var(--w)}
  <div class="stage">
   <picture>
    <source type="image/webp" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/hero-bg-800.webp 800w, ../img/hero-bg-1400.webp 1400w, ../img/hero-bg-2000.webp 2000w, ../img/hero-bg-2800.webp 2800w">
-   <img src="../img/hero-bg-1400.jpg" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/hero-bg-800.jpg 800w, ../img/hero-bg-1400.jpg 1400w, ../img/hero-bg-2000.jpg 2000w, ../img/hero-bg-2800.jpg 2800w" width="2800" height="1866" alt="Облачное небо над небоскрёбами" fetchpriority="high">
+   <img src="../img/hero-bg-1400.jpg" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/hero-bg-800.jpg 800w, ../img/hero-bg-1400.jpg 1400w, ../img/hero-bg-2000.jpg 2000w, ../img/hero-bg-2800.jpg 2800w" width="2800" height="2263" alt="Облачное небо над небоскрёбами" fetchpriority="high">
   </picture>
   <div class="clouds" aria-hidden="true"></div>
   <div class="bigword" aria-hidden="true"><span class="bw">AIM</span></div>
   <picture>
    <source type="image/webp" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/hero-fg-800.webp 800w, ../img/hero-fg-1400.webp 1400w, ../img/hero-fg-2000.webp 2000w, ../img/hero-fg-2800.webp 2800w">
-   <img src="../img/hero-fg-1400.png" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/hero-fg-800.png 800w, ../img/hero-fg-1400.png 1400w, ../img/hero-fg-2000.png 2000w" width="2800" height="1866" alt="Стеклянные небоскрёбы, вид снизу" fetchpriority="high">
+   <img src="../img/hero-fg-1400.png" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/hero-fg-800.png 800w, ../img/hero-fg-1400.png 1400w, ../img/hero-fg-2000.png 2000w" width="2800" height="2263" alt="Стеклянные небоскрёбы, вид снизу" fetchpriority="high">
   </picture>
  </div>
  <div class="shade"></div>
