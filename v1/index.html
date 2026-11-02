@@ -22,16 +22,16 @@
 <meta property="og:title" content="AIM Building Technologies: фасады, СПК и витражи в Москве">
 <meta property="og:description" content="Быстро. Точно. Без переделок. Свои бригады, ИТР и ПТО, объекты до 10 000 м². От 6 000 ₽ за м².">
 <meta property="og:url" content="https://YOUR-DOMAIN.ru/">
-<meta property="og:image" content="https://YOUR-DOMAIN.ru/img/og-image.jpg">
+<meta property="og:image" content="https://YOUR-DOMAIN.ru/img/og-city.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="AIM Building Technologies: фасады, СПК и витражи">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="../favicon.ico" sizes="48x48">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="manifest" href="../site.webmanifest">
+<link rel="icon" href="../favicon.ico?v=3" sizes="48x48">
+<link rel="icon" href="../favicon.svg?v=3" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=3">
+<link rel="manifest" href="../site.webmanifest?v=3">
 <link rel="stylesheet" href="../css/form.css">
 
 <link rel="preload" href="../fonts/oswald.woff2" as="font" type="font/woff2" crossorigin>
@@ -47,7 +47,7 @@
   "description": "Монтаж фасадов, светопрозрачных конструкций (СПК) и витражей в Москве и Московской области. Свои бригады от 10 до 30 человек, свой ИТР и ПТО, без субподрядчиков.",
   "url": "https://YOUR-DOMAIN.ru/",
   "logo": "https://YOUR-DOMAIN.ru/img/icon-512.png",
-  "image": "https://YOUR-DOMAIN.ru/img/og-image.jpg",
+  "image": "https://YOUR-DOMAIN.ru/img/og-city.jpg",
   "telephone": "+79000000000",
   "email": "info@aim-bt.ru",
   "priceRange": "от 6 000 ₽ за м²",
@@ -144,8 +144,8 @@ section[id]{scroll-margin-top:0}
 .stage{position:absolute;top:0;left:-15%;width:130%;aspect-ratio:2800/2263}
 .stage img{position:absolute;inset:0;width:100%;height:100%}
 /* Облака: полоса неба (кадр + зеркальная копия), бесконечно плывёт влево и плавно растворяется книзу */
-.clouds{position:absolute;top:0;left:0;width:400%;height:36%;background:url(../img/clouds-band-2800.png) repeat-x 0 0/50% 100%;background-image:image-set(url(../img/clouds-band-2800.webp) type("image/webp"),url(../img/clouds-band-2800.png) type("image/png"));-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent);mask-image:linear-gradient(to bottom,#000 55%,transparent)}
-@media (max-width:767px){.clouds{background-image:url(../img/clouds-band-1400.png);background-image:image-set(url(../img/clouds-band-1400.webp) type("image/webp"),url(../img/clouds-band-1400.png) type("image/png"))}}
+.clouds{position:absolute;top:0;left:0;width:400%;height:36%;background:url(../img/clouds-alpha-2800.png) repeat-x 0 0/50% 100%;background-image:image-set(url(../img/clouds-alpha-2800.webp) type("image/webp"),url(../img/clouds-alpha-2800.png) type("image/png"));-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent);mask-image:linear-gradient(to bottom,#000 55%,transparent)}
+@media (max-width:767px){.clouds{background-image:url(../img/clouds-alpha-1400.png);background-image:image-set(url(../img/clouds-alpha-1400.webp) type("image/webp"),url(../img/clouds-alpha-1400.png) type("image/png"))}}
 .bigword .bw{display:inline-block}
 .bigword{will-change:transform}
 .bigword{position:absolute;left:0;right:0;top:4.861cqw;text-align:center;font-family:var(--play);font-weight:900;font-size:min(27.778cqw,560px);line-height:1;letter-spacing:.06em;color:#fff;text-shadow:0 20px 60px rgba(0,0,0,.25);pointer-events:none;user-select:none}
@@ -451,14 +451,14 @@ footer .brand b{font-size:22px;color:var(--w)}
 <section class="hero" aria-labelledby="h1">
  <div class="stage">
   <picture>
-   <source type="image/webp" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/hero-bg-800.webp 800w, ../img/hero-bg-1400.webp 1400w, ../img/hero-bg-2000.webp 2000w, ../img/hero-bg-2800.webp 2800w">
-   <img src="../img/hero-bg-1400.jpg" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/hero-bg-800.jpg 800w, ../img/hero-bg-1400.jpg 1400w, ../img/hero-bg-2000.jpg 2000w, ../img/hero-bg-2800.jpg 2800w" width="2800" height="2263" alt="Облачное небо над небоскрёбами" fetchpriority="high">
+   <source type="image/webp" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/city-bg-800.webp 800w, ../img/city-bg-1400.webp 1400w, ../img/city-bg-2000.webp 2000w, ../img/city-bg-2800.webp 2800w">
+   <img src="../img/city-bg-1400.jpg" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/city-bg-800.jpg 800w, ../img/city-bg-1400.jpg 1400w, ../img/city-bg-2000.jpg 2000w, ../img/city-bg-2800.jpg 2800w" width="2800" height="2263" alt="Облачное небо над небоскрёбами" fetchpriority="high">
   </picture>
   <div class="clouds" aria-hidden="true"></div>
   <div class="bigword" aria-hidden="true"><span class="bw">AIM</span></div>
   <picture>
-   <source type="image/webp" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/hero-fg-800.webp 800w, ../img/hero-fg-1400.webp 1400w, ../img/hero-fg-2000.webp 2000w, ../img/hero-fg-2800.webp 2800w">
-   <img src="../img/hero-fg-1400.png" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/hero-fg-800.png 800w, ../img/hero-fg-1400.png 1400w, ../img/hero-fg-2000.png 2000w" width="2800" height="2263" alt="Стеклянные небоскрёбы, вид снизу" fetchpriority="high">
+   <source type="image/webp" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/city-fg-800.webp 800w, ../img/city-fg-1400.webp 1400w, ../img/city-fg-2000.webp 2000w, ../img/city-fg-2800.webp 2800w">
+   <img src="../img/city-fg-1400.png" sizes="(max-width:767px) 120vw, (max-width:1023px) 150vw, 130vw" srcset="../img/city-fg-800.png 800w, ../img/city-fg-1400.png 1400w, ../img/city-fg-2000.png 2000w" width="2800" height="2263" alt="Стеклянные небоскрёбы, вид снизу" fetchpriority="high">
   </picture>
  </div>
  <div class="shade"></div>
@@ -550,19 +550,19 @@ footer .brand b{font-size:22px;color:var(--w)}
  -->
  <div class="objs">
   <article class="obj">
-   <picture class="obj-ph"><source type="image/webp" srcset="../img/hero-bg-800.webp"><img src="../img/hero-bg-800.jpg" loading="lazy" decoding="async" alt=""></picture>
+   <picture class="obj-ph"><source type="image/webp" srcset="../img/city-bg-800.webp"><img src="../img/city-bg-800.jpg" loading="lazy" decoding="async" alt=""></picture>
    <div class="n" aria-hidden="true">01</div><span class="tp">Фасад</span><h3>УВД Бабушкинского района</h3><p>Фасад административного здания, Москва</p>
   </article>
   <article class="obj">
-   <picture class="obj-ph"><source type="image/webp" srcset="../img/hero-bg-800.webp"><img src="../img/hero-bg-800.jpg" loading="lazy" decoding="async" alt=""></picture>
+   <picture class="obj-ph"><source type="image/webp" srcset="../img/city-bg-800.webp"><img src="../img/city-bg-800.jpg" loading="lazy" decoding="async" alt=""></picture>
    <div class="n" aria-hidden="true">02</div><span class="tp">Фасад · реновация</span><h3>Жилой дом в Бутово</h3><p>Фасад дома по программе реновации</p>
   </article>
   <article class="obj">
-   <picture class="obj-ph"><source type="image/webp" srcset="../img/hero-bg-800.webp"><img src="../img/hero-bg-800.jpg" loading="lazy" decoding="async" alt=""></picture>
+   <picture class="obj-ph"><source type="image/webp" srcset="../img/city-bg-800.webp"><img src="../img/city-bg-800.jpg" loading="lazy" decoding="async" alt=""></picture>
    <div class="n" aria-hidden="true">03</div><span class="tp">Витражи</span><h3>Карачаровский механический завод</h3><p>Витражное остекление производственного здания</p>
   </article>
   <article class="obj">
-   <picture class="obj-ph"><source type="image/webp" srcset="../img/hero-bg-800.webp"><img src="../img/hero-bg-800.jpg" loading="lazy" decoding="async" alt=""></picture>
+   <picture class="obj-ph"><source type="image/webp" srcset="../img/city-bg-800.webp"><img src="../img/city-bg-800.jpg" loading="lazy" decoding="async" alt=""></picture>
    <div class="n" aria-hidden="true">04</div><span class="tp">Частные коттеджи</span><h3>Жуковка, Рублёво-Успенское шоссе</h3><p>Фасады и остекление частных домов</p>
   </article>
  </div>
